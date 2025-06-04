@@ -23,6 +23,9 @@ services:
     build:
       context: ./frontend
       dockerfile: Dockerfile
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules # <--- Prevents overwriting the installed modules
     ports:
       - "5173:5173"
     stdin_open: true
