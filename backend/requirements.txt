@@ -1,0 +1,9 @@
+asgiref==3.8.1  # ASGI (Asynchronous Server Gateway Interface) reference implementation, used by Django for async support
+Django==5.2.1  # The main web framework you're using for the backend
+djangorestframework==3.16.0  # Toolkit to build Web APIs using Django (CRUD, serializers, viewsets, etc.)
+gunicorn==23.0.0  # A production-ready WSGI HTTP server for running Django apps (used with Docker and deployment)
+packaging==25.0  # Utility for parsing and comparing package versions (dependency for other packages)
+psycopg2-binary==2.9.10  # PostgreSQL database adapter for Python (lets Django talk to your Postgres DB)
+python-dotenv==1.1.0  # Loads environment variables from a `.env` file (like DB credentials, secret keys)
+sqlparse==0.5.3  # Used internally by Django to format and parse SQL queries (mostly for admin & debugging)
+typing_extensions==4.14.0  # Backport of newer typing features to older Python versions (used by Django and others)
