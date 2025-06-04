@@ -13,7 +13,25 @@ git clone git@github.com:your-username/agritrack.git
 cd agritrack
 ```
 
+Build Docker Images (no-cache)
+
+```bash
+docker-compose build --no-cache
+```
+
+Start the Containers
+
+```bash
+docker-compose up
+```
+
+Access the Application
+
+- Frontend: http://localhost:5173
+- Backend (Django): http://localhost:8000
+
 ## 📁 Folder Structure
+
 ```
 agritrack/
 ├── backend/                   # Django backend
@@ -45,10 +63,12 @@ agritrack/
 ---
 
 ## 🔧 Backend Setup (Django)
+
 - `farm_logs/models.py`: Define models for logs
 - `views.py` and `serializers.py`: Create CRUD API
 - JWT setup via `djangorestframework-simplejwt`
 - `requirements.txt`:
+
 ```txt
 django
 djangorestframework
@@ -60,6 +80,7 @@ psycopg2-binary
 ---
 
 ## 💻 Frontend Setup (React + TS)
+
 - React app initialized with `Vite`
 - Use `axios` to connect to the backend
 - Create components:
@@ -70,9 +91,11 @@ psycopg2-binary
 ---
 
 ## 🐳 Docker & Docker Compose
+
 ### docker-compose.yml
+
 ```yaml
-version: '3.8'
+version: "3.8"
 services:
   backend:
     build: ./backend
@@ -110,6 +133,7 @@ volumes:
 ---
 
 ## ☁️ AWS Hosting Options
+
 - EC2 for manual deployment OR
 - ECS Fargate for managed containers
 - Use RDS PostgreSQL
@@ -118,6 +142,7 @@ volumes:
 ---
 
 ## 🔐 IAM Roles
+
 - CloudAdmin: Full access
 - SecurityAdmin: IAM, GuardDuty, CloudWatch
 - AppAdmin: Deploy app only (no user or VPC management)
