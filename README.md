@@ -2,6 +2,8 @@
 
 This scaffold sets up your fullstack project using **React + TypeScript** (frontend) and **Django + Django REST Framework** (backend), ready to be containerized with Docker and deployed to AWS.
 
+---
+
 ## 🚀 Getting Started (Docker)
 
 Clone the repo:
@@ -9,8 +11,7 @@ Clone the repo:
 ```bash
 git clone git@github.com:your-username/agritrack.git
 cd agritrack
-
----
+```
 
 ## 📁 Folder Structure
 ```
