@@ -1,19 +1,18 @@
 FROM node:20-alpine
 
-# Optional: Add bash for clarity
-RUN apk add --no-cache bash
-
 WORKDIR /app
 
-# Install deps
+# Copy package files first
 COPY package.json package-lock.json ./
+
+# Install dependencies
 RUN npm install
 
-# Copy source code
+# Now copy the rest of the app
 COPY . .
 
-# Ensure vite binary is resolvable
-ENV PATH="/app/node_modules/.bin:$PATH"
+# Add vite to PATH (from node_modules)
+ENV PATH /app/node_modules/.bin:$PATH
 
 EXPOSE 5173
 
